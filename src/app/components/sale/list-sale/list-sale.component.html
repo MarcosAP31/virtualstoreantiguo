@@ -1,0 +1,42 @@
+<div class="card">
+    <div class="card-header">
+        ventas
+        
+    </div>
+    <div class="card-body">
+        <h1>Ventas</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Precio</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Cliente</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sale of Sales; let iControl=index">
+                    <td>{{ sale.SaleId }}</td>
+                    <td>{{ sale.Price }}</td>
+                    <td>{{ sale.Date }}</td>
+                    <td>{{ sale.State }}</td>
+                    <td>{{ sale.ClientId }}</td>
+                    <td>{{ sale.UserId }}</td>
+                    <td>
+                        <a class="btn btn-info" routerLink="/edit-sale/{{sale.SaleId}}">Editar</a> | 
+                        <a class="btn btn-danger" (click)="deleteSale(sale.SaleId,iControl)" role="button">Borrar</a>
+                    </td> 
+                </tr>
+                
+            </tbody>
+                    
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
+
+

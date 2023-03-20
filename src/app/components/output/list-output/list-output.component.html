@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header">
+        Salidas
+       
+    </div>
+    <div class="card-body">
+        <h1>Salidas</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Fecha</th>
+                    <th>Cantidad</th>
+                    <th>Codigo</th>
+                    <th>Cliente</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let output of Outputs; let iControl=index">
+                    <td>{{ output.OutputId }}</td>
+                    <td>{{ output.Date }}</td>
+                    <td>{{ output.Amount }}</td>
+                    <td>{{ output.Code }}</td>
+                    <td>{{ output.ClientId }}</td>
+                    <td>{{ output.UserId }}</td>
+                    <td>
+                        <a class="btn btn-info" routerLink="/edit-output/{{output.OutputId}}">Editar</a> | 
+                        <a class="btn btn-danger" (click)="deleteOutput(output.OutputId,iControl)" role="button">Borrar</a>
+                    </td>
+                    
+                </tr>
+                
+            </tbody>
+                    
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>

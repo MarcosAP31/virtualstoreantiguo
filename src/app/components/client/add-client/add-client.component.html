@@ -1,0 +1,80 @@
+
+<div class="card">
+    <div class="card-header">
+        Agregar Cliente
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="ClientForm" (ngSubmit)="sendData()">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre:</label>
+                <input required type="text" class="form-control" name="" formControlName="Name" id=""
+                    aria-describedby="helpId" placeholder="Escribe el nombre">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Apellido paterno</label>
+                <input required type="text" class="form-control" name="" formControlName="LastName" id=""
+                    aria-describedby="helpId" placeholder="Escribe el apellido paterno">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Apellido materno</label>
+                <input required type="text" class="form-control" name="" formControlName="MotherLastname" id=""
+                    aria-describedby="helpId" placeholder="Escribe el apellido materno">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Fecha de nacimiento</label>
+                <input required type="text" class="form-control" name="" formControlName="Birthday" id=""
+                    aria-describedby="helpId" placeholder="Escribe la fecha de nacimiento">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Sexo</label>
+                <input required type="text" class="form-control" name="" formControlName="Sex" id=""
+                    aria-describedby="helpId" placeholder="Escribe el sexo">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Departamento</label>
+                <input required type="text" class="form-control" name="" formControlName="Department" id=""
+                    aria-describedby="helpId" placeholder="Escribe el departamento">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Provincia</label>
+                <input required type="text" class="form-control" name="" formControlName="Province" id=""
+                    aria-describedby="helpId" placeholder="Escribe la provincia">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Distrito</label>
+                <input required type="text" class="form-control" name="" formControlName="District" id=""
+                    aria-describedby="helpId" placeholder="Escribe el distrito">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Direccion</label>
+                <input required type="text" class="form-control" name="" formControlName="Direction" id=""
+                    aria-describedby="helpId" placeholder="Escribe la dirección">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Teléfono</label>
+                <input required type="text" class="form-control" name="" formControlName="Phone" id=""
+                    aria-describedby="helpId" placeholder="Escribe el teléfono">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Correo</label>
+                <input required type="text" class="form-control" name="" formControlName="Email" id=""
+                    aria-describedby="helpId" placeholder="Escribe el correo">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Contraseña</label>
+                <input required type="text" class="form-control" name="" formControlName="Password" id=""
+                    aria-describedby="helpId" placeholder="Escribe la contraseña">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Imagen</label>
+                <input required type="file" class="form-control" name="" formControlName="Image" id=""
+                    aria-describedby="helpId" placeholder="Escribe la imagen">
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" routerLink="/list-client/" class="btn btn-primary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+</div>

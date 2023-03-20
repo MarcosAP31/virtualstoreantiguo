@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header">
+        Inventario
+        <a class="btn btn-success" routerLink="/add-inventory/">Agregar nuevo producto al inventario</a>
+    </div>
+    <div class="card-body">
+        <h1>Inventario</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Cantidad</th>
+                    <th>Precio de compra</th>
+                    <th>Precio de venta</th>
+                    <th>Proveedor</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of Products; let iControl=index">
+                    <td>{{ product.Code }}</td>
+                    <td>{{ product.Description }}</td>
+                    <td>{{ product.Category }}</td>
+                    <td>{{ product.Amount }}</td>
+                    <td>{{ product.PurchasePrice }}</td>
+                    <td>{{ product.SalePrice }}</td>
+                    <td>{{ product.SupplierId }}</td>
+                    <td>{{ product.Image }}</td>
+                    <td>
+                    <a class="btn btn-info" routerLink="/edit-inventory/{{product.Code}}">Editar</a> | 
+                    <a class="btn btn-danger" (click)="deleteProduct(product.Code,iControl)" role="button">Borrar</a>
+                </td>
+                    
+                </tr>
+                
+            </tbody>
+                    
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>

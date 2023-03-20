@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">
+        Entradas
+        <a class="btn btn-success" routerLink="/add-entry/">Agregar nueva entrada de producto</a>
+    </div>
+    <div class="card-body">
+        <h1>Entradas</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Fecha</th>
+                    <th>Cantidad</th>
+                    <th>Codigo</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let entry of Entrys; let iControl=index">
+                    <td>{{ entry.EntryId }}</td>
+                    <td>{{ entry.Date }}</td>
+                    <td>{{ entry.Amount }}</td>
+                    <td>{{ entry.Code }}</td>
+                    <td>{{ entry.User }}</td>
+                    <td>
+                        <a class="btn btn-info" routerLink="/edit-entry/{{entry.EntryId}}">Editar</a> | 
+                        <a class="btn btn-danger" (click)="deleteEntry(entry.EntryId,iControl)" role="button">Borrar</a>
+                    </td>
+                    
+                </tr>
+                
+            </tbody>
+                    
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>

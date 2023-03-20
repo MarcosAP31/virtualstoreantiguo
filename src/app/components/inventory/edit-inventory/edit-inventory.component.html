@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-header">
+        Agregar producto al inventario
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="ProductForm" (ngSubmit)="sendData()">
+            <div class="mb-3">
+                <label for="" class="form-label">Descripcion:</label>
+                <input required type="text" class="form-control" name="" formControlName="Description" id=""
+                    aria-describedby="helpId" placeholder="Escribe la descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Categoria</label>
+                <input required type="text" class="form-control" name="" formControlName="Category" id=""
+                    aria-describedby="helpId" placeholder="Escribe la categoría">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Cantidad</label>
+                <input required type="text" class="form-control" name="" formControlName="Amount" id=""
+                    aria-describedby="helpId" placeholder="Escribe la cantidad">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Precio de compra</label>
+                <input required type="text" class="form-control" name="" formControlName="PurchasePrice" id=""
+                    aria-describedby="helpId" placeholder="Escribe el precio de compra">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Precio de venta</label>
+                <input required type="text" class="form-control" name="" formControlName="SalePrice" id=""
+                    aria-describedby="helpId" placeholder="Escribe el precio de venta">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Proveedor</label>
+                <input required type="text" class="form-control" name="" formControlName="SupplierId" id=""
+                    aria-describedby="helpId" placeholder="Escribe el proveedor">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Imagen</label>
+                <input required type="text" class="form-control" name="" formControlName="Image" id=""
+                    aria-describedby="helpId" placeholder="Escribe la imagen">
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-warning">Modificar registro</button>
+                <button type="button" routerLink="/list-inventory" class="btn btn-primary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+</div>

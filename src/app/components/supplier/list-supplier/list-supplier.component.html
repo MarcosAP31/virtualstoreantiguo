@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-header">
+        Proveedores
+        <a class="btn btn-success" routerLink="/add-supplier/">Agregar nuevo proveedor a la tienda</a>
+    </div>
+    <div class="card-body">
+        <h1>Proveedores</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>RUC</th>
+                    <th>Nombre empresarial</th>
+                    <th>Nombre comercial</th>
+                    <th>Tipo</th>
+                    <th>Departamento</th>
+                    <th>Provincia</th>
+                    <th>Distrito</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let supplier of Suppliers; let iControl=index">
+                    <td>{{ supplier.SupplierId }}</td>
+                    <td>{{ supplier.RUC }}</td>
+                    <td>{{ supplier.BusinessName }}</td>
+                    <td>{{ supplier.TradeName }}</td>
+                    <td>{{ supplier.Kind }}</td>
+                    <td>{{ supplier.Department }}</td>
+                    <td>{{ supplier.Province }}</td>
+                    <td>{{ supplier.District }}</td>
+                    <td>{{ supplier.Direction }}</td>
+                    <td>{{ supplier.Phone }}</td>
+                    <td>{{ supplier.Email }}</td>
+                    <td>
+                        <a class="btn btn-info" routerLink="/edit-supplier/{{supplier.SupplierId}}">Editar</a> | 
+                        <a class="btn btn-danger" (click)="deleteSupplier(supplier.SupplierId,iControl)" role="button">Borrar</a>
+                    </td>
+                    
+                </tr>
+                
+            </tbody>
+                    
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
+
+

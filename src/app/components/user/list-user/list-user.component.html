@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card-header">
+        Usuarios
+        <a class="btn btn-success" routerLink="/add-user/">Agregar nuevo usuario a la tienda</a>
+    </div>
+    <div class="card-body">
+        <h1>Usuarios</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Apellido paterno</th>
+                    <th>Apellido materno</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Sexo</th>
+                    <th>Departamento</th>
+                    <th>Provincia</th>
+                    <th>Distrito</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Contraseña</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users; let iControl=index">
+                    <td>{{ user.UserId }}</td>
+                    <td>{{ user.Name }}</td>
+                    <td>{{ user.LastName }}</td>
+                    <td>{{ user.MotherLastname }}</td>
+                    <td>{{ user.Birthday }}</td>
+                    <td>{{ user.Sex }}</td>
+                    <td>{{ user.Department }}</td>
+                    <td>{{ user.Province }}</td>
+                    <td>{{ user.District }}</td>
+                    <td>{{ user.Direction }}</td>
+                    <td>{{ user.Phone }}</td>
+                    <td>{{ user.Email }}</td>
+                    <td>{{ user.Password }}</td>
+                    <td>
+                        <a class="btn btn-info" routerLink="/edit-user/{{user.UserId}}">Editar</a> | 
+                        <a class="btn btn-danger" (click)="deleteUser(user.UserId,iControl)" role="button">Borrar</a>
+                    </td>
+                    
+                </tr>
+                
+            </tbody>
+                    
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
+
+

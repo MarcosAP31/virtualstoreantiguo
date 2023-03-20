@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="card-header">
+        Editar Proveedor
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="SupplierForm" (ngSubmit)="sendData()">
+            <div class="mb-3">
+                <label for="" class="form-label">RUC:</label>
+                <input required type="text" class="form-control" name="" formControlName="RUC" id=""
+                    aria-describedby="helpId" placeholder="Escribe el RUC">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre empresarial</label>
+                <input required type="text" class="form-control" name="" formControlName="BusinessName" id=""
+                    aria-describedby="helpId" placeholder="Escribe el nombre empresarial">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre comercial</label>
+                <input required type="text" class="form-control" name="" formControlName="TradeName" id=""
+                    aria-describedby="helpId" placeholder="Escribe el nombre comercial">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Tipo de empresa</label>
+                <input required type="text" class="form-control" name="" formControlName="Kind" id=""
+                    aria-describedby="helpId" placeholder="Escribe el tipo de empresa">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Departamento</label>
+                <input required type="text" class="form-control" name="" formControlName="Department" id=""
+                    aria-describedby="helpId" placeholder="Escribe el sexo">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Provincia</label>
+                <input required type="text" class="form-control" name="" formControlName="Province" id=""
+                    aria-describedby="helpId" placeholder="Escribe la provincia">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Distrito</label>
+                <input required type="text" class="form-control" name="" formControlName="District" id=""
+                    aria-describedby="helpId" placeholder="Escribe el distrito">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Direccion</label>
+                <input required type="text" class="form-control" name="" formControlName="Direction" id=""
+                    aria-describedby="helpId" placeholder="Escribe la dirección">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Teléfono</label>
+                <input required type="text" class="form-control" name="" formControlName="Phone" id=""
+                    aria-describedby="helpId" placeholder="Escribe el teléfono">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Correo</label>
+                <input required type="text" class="form-control" name="" formControlName="Email" id=""
+                    aria-describedby="helpId" placeholder="Escribe el correo">
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-warning">Modificar proveedor</button>
+                <button type="button" routerLink="/list-supplier" class="btn btn-primary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

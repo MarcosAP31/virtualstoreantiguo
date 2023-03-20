@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header">
+        Editar venta
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="SaleForm" (ngSubmit)="sendData()">
+            <div class="mb-3">
+                <label for="" class="form-label">Precio:</label>
+                <input required type="text" class="form-control" name="" formControlName="Price" id=""
+                    aria-describedby="helpId" placeholder="Escribe el precio total">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Estado</label>
+                <input required type="text" class="form-control" name="" formControlName="State" id=""
+                    aria-describedby="helpId" placeholder="Escribe el estado de la venta">
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-warning">Modificar venta</button>
+                <button type="button" routerLink="/list-sale" class="btn btn-primary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+</div>
